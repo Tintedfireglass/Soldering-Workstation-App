@@ -75,13 +75,13 @@ namespace SolderingMonitor
                     string[] values = data.Split(DATA_DELIMITER);
                     if (values.Length == 9)
                     {
-                        // Update Soldering Iron
+                        //Soldering Iron
                         SolderingIronTemperature.Text = $"{values[0]}°C";
                         SolderingIronPower.Value = double.Parse(values[1]);
                         SolderingIronPowerSlider.Value = double.Parse(values[1]);
                         SolderingIronToggle.IsChecked = values[1] != "0";
 
-                        // Update SMD Rework
+                        //SMD Station
                         SMDReworkTemperature.Text = $"{values[2]}°C";
                         SMDReworkPower.Value = double.Parse(values[3]);
                         SMDReworkPowerSlider.Value = double.Parse(values[3]);
@@ -89,7 +89,7 @@ namespace SolderingMonitor
                         SMDReworkAirFlow.Value = double.Parse(values[5]);
                         SMDReworkAirFlowSlider.Value = double.Parse(values[5]);
 
-                        // Update LCD Repair
+                        //LCD Heater
                         LCDRepairTemperature.Text = $"{values[6]}°C";
                         LCDRepairPower.Value = double.Parse(values[7]);
                         LCDRepairPowerSlider.Value = double.Parse(values[7]);
